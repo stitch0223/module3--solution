@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Assignment solution for module 2</title>
+   <link rel="stylesheet" type="text/css" href="index.css"> <!-- change this to change the directory -->
+</head>
+<body>
+   <div class="container">
+       <h1>
+           Our Menu
+       </h1>
+       <div class="row">
+           <div class="items">
+               <div class="items-title title1">Chicken</div>
+               <div class="text">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </div>
+           </div>
+
+           <div class="items">
+               <div class="items-title title2">Beef</div>
+               <div class="text">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </div>
+           </div>
+
+           <div class="items items-3">
+               <div class="items-title title3">Sushi</div>
+               <div class="text">
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+               tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+               consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+               cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+               proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+               </div>
+           </div>
+       </div>
+   </div>
+</body>
+</html>
+
+index.css
+
+.container{
+   margin: 0px 25px;
+   align-items: center;
+}
+.row{
+   display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+margin-right: -15px;
+margin-left: -15px;
+}
+h1{
+   text-align: center;
+}
+
+.text{
+   padding: 10px 15px;
+}
+
+.items{
+position: relative;
+width: 100%;
+min-height: 1px;
+border: 1px solid black; /* change here to change the size of the border*/
+margin: 10px 20px;
+background-color: grey;
+}
+.title1{
+   background-color: pink;
+}
+.title2{
+   background-color: red;
+}
+.title3{
+   background-color: yellow;
+}
+.items-title{
+   text-align: center;
+   position: relative;
+   margin-left:60%;
+   border-left: 1px solid black; /*change here to change the size of the border*/
+   border-bottom: 1px solid black; /*change here to change the size of the border*/
+}
+
+/* Queries for different breakpoints */
+@media (min-width: 992px) {
+   .items{
+-ms-flex: 0 0 26%;
+flex: 0 0 26%;
+max-width: 26%;
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+   .items{
+   -ms-flex: 0 0 41%;
+flex: 0 0 41%;
+max-width: 41%;
+}
+.items-3{
+   -ms-flex: 0 0 89%;
+flex: 0 0 89%;
+max-width: 89%;
+}
+}
+
+@media (max-width: 767px) {
+   .items{
+   -ms-flex: 0 0 90%;
+flex: 0 0 90%;
+max-width: 90%;
+}
