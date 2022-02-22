@@ -1,83 +1,133 @@
-/* 
- General
- */
-body,
-html {
-	width: 100%;
-	height: 100%;
-    text-rendering: optimizeLegibility;
-    font-family: 'Lato', sans-serif;
+body {
+	font-size: 16px;
+	color: #fff;
+	background-color: #c1eaff;
+	font-family: 'Oxygen', sans-serif;
 }
 
-/*
-Typography
-*/
-@import url('https://fonts.googleapis.com/css?family=Lato|Mina');
-p {
-	line-height: 1.6em;
-	margin: 0 0 10px 0;
-}
-h1,
-h2,
-h3,
- {
-	font-weight: 400;
-	line-height: 1.1em;
-}
 h1 {
-	font-size: 36px;
-	margin-bottom: 20px;
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
 }
-h2 {
-	font-size: 30px;
-	margin-bottom: 20px;
-}
+/** HEADER **/
 
-/*
-Navbar
- */
-.navbar-brand{
-   font-family: 'Mina', sans-serif;
-   font-size: 28pt;
+
+#header-nav {
+	background-color: #0c9;
+	border-radius: 0;
+	border: 0;
 
 }
+.navbar-brand {
+  padding: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.navbar-brand h1 { /* Restaurant name */
 
-/* 
- Sections
- */
-#chicken{
-    background-image: url(../img/kirsty-tg-146655-unsplash.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+  color: #337c40;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: .75;
 }
-#beef{
-    background-image: url(../img/james-sutton-198306-unsplash1.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-}
-#sushi{
-    background-image: url(../img/j-329172-unsplash.png);
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
 }
 
-.text-justify.bg-dark.p-2{
-    opacity: 0.6;
+.navbar-toggle {
+  background-color: #0c9;
+  margin-top: 10px;
 }
 
-/*end style*/
+#nav-list {
+
+  background-color: #cff;
+}
+
+.navbar-nav {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+#nav-list a {
+  color: #1c9568;
+}
+#nav-list a:hover {
+  background: #AAE7E7;
+}
+ul hr {
+  border-top: 1px solid #ccc;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid  #033;
+}
+
+/* END HEADER */
+
+
+/* HOME PAGE */
+h1.text-center {
+  margin-bottom: 10px;
+}
+
+
+div#main-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.menu-cell {
+  min-height: 700px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #f5fbff;
+  color: black;
+
+}
+/* END HOME PAGE */
+
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .collapse.in {
+  display: none;
+}
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Header */
+  .collapse.in {
+  display: none;
+}
+
+  /* End Header */
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .collapse.in {
+  display: none;
+}
+
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    font-size: 1.2em;
+  }
+  /* End Header */
+
+}
