@@ -1,237 +1,115 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>Module 3 Solution</title>
-<style>
-	
-/********** Base styles **********/
-* {
-    box-sizing: border-box;
-}
-h1 {
-    margin-bottom: 15px;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Module 3 Coding Assignment</title>
+  <!--css-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <!--fontawesome-->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!--style-->
+  <link rel="stylesheet" href="css/style.css">
 
-p {
-	boarder: 1px solid black;
-	background-color: #A52A2A
-	width: 90%;
-	height: 150%;
-	margin-right: auto;
-    	margin-left: auto;
-    	font-family: Helvetica,serif;
-	color: black;
-}
-
-/* Simple Responsive Framework. */
-	.row {
-		width: 100%;
-}
-
-/********** Large devices only **********/
-@media (min-width: 992px) {
-    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-        float: left;
-	border: 1px black;
-	    
-    }
-    .col-lg-1 {
-        width: 8.33%;
-    }
-    .col-lg-2 {
-        width: 16.66%;
-    }
-    .col-lg-3 {
-        width: 25%;
-    }
-    .col-lg-4 {
-        width: 33.33%;
-    }
-    .col-lg-5 {
-        width: 41.66%;
-    }
-    .col-lg-6 {
-        width: 50%;
-    }
-    .col-lg-7 {
-        width: 58.33%;
-    }
-    .col-lg-8 {
-        width: 66.66%;
-    }
-    .col-lg-9 {
-        width: 74.99%;
-    }
-    .col-lg-10 {
-        width: 83.33%;
-    }
-    .col-lg-11 {
-        width: 91.66%;
-    }
-    .col-lg-12 {
-        width: 100%;
-    }
-}
-
-
-/********** Medium devices only **********/
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-	    float: left;
-	    border: 1px black;
-    }
-    .col-md-1 {
-        width: 8.33%;
-    }
-    .col-md-2 {
-        width: 16.66%;
-    }
-    .col-md-3 {
-        width: 25%;
-    }
-    .col-md-4 {
-        width: 33.33%;
-    }
-    .col-md-5 {
-        width: 41.66%;
-    }
-    .col-md-6 {
-        width: 50%;
-    }
-    .col-md-7 {
-        width: 58.33%;
-    }
-    .col-md-8 {
-        width: 66.66%;
-    }
-    .col-md-9 {
-        width: 74.99%;
-    }
-    .col-md-10 {
-        width: 83.33%;
-    }
-    .col-md-11 {
-        width: 91.66%;
-    }
-    .col-md-12 {
-        width: 100%;
-    }
-}
-
-/********** Small devices only **********/
-@media (max-width: 767px) {
-    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-        float: left;
-    }
-    .col-sm-1 {
-        width: 8.33%;
-    }
-    .col-sm-2 {
-        width: 16.66%;
-    }
-    .col-sm-3 {
-        width: 25%;
-    }
-    .col-sm-4 {
-        width: 33.33%;
-    }
-    .col-sm-5 {
-        width: 41.66%;
-    }
-    .col-sm-6 {
-        width: 50%;
-    }
-    .col-sm-7 {
-        width: 58.33%;
-    }
-    .col-sm-8 {
-        width: 66.66%;
-    }
-    .col-sm-9 {
-        width: 74.99%;
-    }
-    .col-sm-10 {
-        width: 83.33%;
-    }
-    .col-sm-11 {
-        width: 91.66%;
-    }
-    .col-sm-12 {
-        width: 100%;
-    }
-}
-
-/********** Titles of boxes **********/
-.container {
-    position: relative;
-    padding-top: 40px;
-    background-color: grey;
-    float: left;
-    border: 1px solid black;
-    height: 100%;
-}
-
-.outerContainer {
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-.title {
-    position: center;
-    top: 0;
-    right: 0;
-    font-size: 14px;
-    width: 100px;
-    border-left-style: solid;
-    border-left-width: 1px;
-    border-left-color: black;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: black;
-    text-align: center;
-}
-
-.chicken {
-    background-color: darksalmon;
-    color: black;
-}
-
-.beef {
-    background-color: orangered;
-    color: white;
-}
-
-.sushi {
-    background-color: lemonchiffon;
-    color: black;
-	}
-}	
-
-</style>	
 </head>
-<body>
-<h1>Our Menu</h1>
 
-<div class="row">
-    <div class="col-lg-4 col-md-6 col-sm-12 outerContainer">
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div class="title chicken"><p>Chicken</p></div>
+<body>
+    <!--navbar-->
+  <nav id="top" class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand font-weight-bold" href="#">Food, LLC</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link text-capitalize d-md-none d-xl-none  text-center" href="#chicken">Chicken
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-capitalize d-md-none d-xl-none text-center" href="#beef">Beef</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  text-capitalize d-md-none d-xl-none text-center" href="#sushi">Sushi</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--end navbar-->
+  <header>
+    <h1 class="text-capitalize text-center p-4 font-weight-bold">Our Menú</h1>
+  </header>
+  <!--text container section-->
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-2">
+        <!--chicken text-->
+        <div id="chicken" class="bg-dark p-5 text-light">
+          <h2 class="font-weight-bold text-center bg-dark">Chiken</h2>
+          <p class="text-justify bg-dark p-2 font-weight-bold">Ex enim occaecat ut nostrud minim laboris. In ut consequat velit non ad aliquip reprehenderit enim anim deserunt.
+            Cillum enim sit officia commodo laboris ipsum dolore velit. In excepteur elit duis eiusmod cupidatat enim amet
+            do aute incididunt occaecat. Sint velit eiusmod minim velit nulla velit id. Qui nostrud veniam proident culpa.
+            Amet reprehenderit enim duis officia qui. Ipsum magna exercitation irure consequat nulla duis dolore amet consequat
+            dolor eiusmod est est. Aliquip occaecat nisi culpa nostrud ut anim labore. Dolor occaecat do sit ea aliqua quis
+            commodo eu laboris esse adipisicing. </p>
+          <p class="text-justify bg-dark p-2 font-weight-bold">In elit fugiat nisi et aliqua cupidatat eiusmod non cillum.</p>
+          <a href="#top">Back to top</a>
         </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12 outerContainer">
-        <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="title beef"><p>Beef</p></div>
+      </div>
+      <!--end chiken text-->
+      <!--beef text-->
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 p-2">
+        <div id="beef" class="bg-dark p-5 text-light">
+          <h2 class="font-weight-bold text-center bg-dark">Beef</h2>
+          <p class="text-justify bg-dark p-2 font-weight-bold">Ex enim occaecat ut nostrud minim laboris. In ut consequat velit non ad aliquip reprehenderit enim anim deserunt.
+            Cillum enim sit officia commodo laboris ipsum dolore velit. In excepteur elit duis eiusmod cupidatat enim amet
+            do aute incididunt occaecat. Sint velit eiusmod minim velit nulla velit id. Qui nostrud veniam proident culpa.
+            Amet reprehenderit enim duis officia qui. Ipsum magna exercitation irure consequat nulla duis dolore amet consequat
+            dolor eiusmod est est. Aliquip occaecat nisi culpa nostrud ut anim labore. Dolor occaecat do sit ea aliqua quis
+            commodo eu laboris esse adipisicing. Enim pariatur ut esse fugiat magna do excepteur aliqua ullamco eiusmod ex.
+            Amet laboris et adipisicing dolor. </p>
+          <p class="text-justify bg-dark p-2 font-weight-bold">In elit fugiat nisi et aliqua cupidatat eiusmod non cillum.</p>
+          <a href="#top">Back to top</a>
         </div>
-    </div>
-    <div class="col-lg-4 col-md-12 col-sm-12 outerContainer">
-        <div class="container">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="title sushi"><p>Sushi</p></div>
+      </div>
+      <!--end beef text-->
+      <!--sushi text-->
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 p-2">
+        <div id="sushi" class="bg-dark p-5 text-light">
+          <h2 class="font-weight-bold text-center bg-dark">Sushi</h2>
+          <p class="text-justify bg-dark p-2 font-weight-bold">Ex enim occaecat ut nostrud minim laboris. In ut consequat velit non ad aliquip reprehenderit enim anim deserunt.
+            Cillum enim sit officia commodo laboris ipsum dolore velit. In excepteur elit duis eiusmod cupidatat enim amet
+            do aute incididunt occaecat. Sint velit eiusmod minim velit nulla velit id. Qui nostrud veniam proident culpa.
+            Amet reprehenderit enim duis officia qui. Ipsum magna exercitation irure consequat nulla duis dolore amet consequat
+            dolor eiusmod est est. Aliquip occaecat nisi culpa nostrud ut anim labore. Dolor occaecat do sit ea aliqua quis
+            commodo eu laboris esse adipisicing. Enim pariatur ut esse fugiat magna do excepteur aliqua ullamco eiusmod ex.
+            Amet laboris et adipisicing dolor. </p>
+          <p class="text-justify bg-dark p-2 font-weight-bold">In elit fugiat nisi et aliqua cupidatat eiusmod non cillum.</p>
+          <a href="#top">Back to top</a>
         </div>
+      </div>
+      <!--end sushi text-->
     </div>
-</div>
+  </section>
+  <!--end section container-->
+
+  <footer>
+    <div class="container text-center">
+   
+    </div>
+  </footer>
+  <!--bootstrap js-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
